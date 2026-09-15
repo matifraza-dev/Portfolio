@@ -4,7 +4,7 @@ import { fallbackBundle } from "../lib/fallbackData";
 import type { ResumeBundle } from "../lib/types";
 
 export function useResumeBundle() {
-  return useQuery<ResumeBundle>({
+  const query = useQuery<ResumeBundle>({
     queryKey: ["resume-bundle"],
     queryFn: async () => {
       const { data } = await api.get<ResumeBundle>("/bundle/");
@@ -13,4 +13,9 @@ export function useResumeBundle() {
     placeholderData: fallbackBundle,
     retry: 0,
   });
+
+  return {
+    ...query,
+    data: query.data ?? fallbackBundle,
+  };
 }
