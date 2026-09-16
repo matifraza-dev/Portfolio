@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import type { Stat } from "../lib/types";
 import HeroVisual from "./HeroVisual";
 
@@ -25,8 +25,8 @@ export default function Hero({ stats }: { stats: Stat[] }) {
             variants={item}
             className="inline-flex items-center gap-2 font-mono text-xs text-skylight border border-skylight/30 rounded px-3 py-1 mb-8"
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-skylight animate-pulse" />
-            status --available for remote work · UTC+5
+            <span className="w-1.5 h-1.5 rounded-full bg-teal animate-pulse" />
+            status --available for remote work Â· UTC+5
           </motion.div>
 
           <motion.h1
@@ -40,18 +40,12 @@ export default function Hero({ stats }: { stats: Stat[] }) {
           <motion.p variants={item} className="mt-6 max-w-xl text-lg text-muted leading-relaxed">
             Full Stack Developer and Technical Project Coordinator. Django REST
             backends, React/TypeScript frontends, and the sprint coordination
-            that keeps a 4-person team on schedule — from one person, remote,
+            that keeps a 4-person team on schedule â€” from one person, remote,
             from Pakistan.
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-4">
-            <a
-              href="#projects"
-              className="px-5 py-3 rounded bg-sky text-ink font-medium hover:bg-sky/90 transition-colors"
-            >
-              See the work
-            </a>
-            <a href="#tools" className="px-5 py-3 rounded-xl outline outline-2 outline-offset-[3px] outline-[#D36938] bg-transparent text-white font-medium hover:outline-offset-[5px] transition-all duration-200">Try the free tools</a>
+          <motion.div variants={item} className="mt-9 flex flex-wrap items-center justify-start gap-4">
+            <a href="#projects" className="px-5 py-3 rounded-xl outline outline-2 outline-offset-[3px] outline-[#D36938] bg-transparent text-white font-medium hover:outline-offset-[5px] transition-all duration-200">See the work</a>
           </motion.div>
 
           <motion.div
@@ -87,3 +81,4 @@ export default function Hero({ stats }: { stats: Stat[] }) {
     </section>
   );
 }
+
